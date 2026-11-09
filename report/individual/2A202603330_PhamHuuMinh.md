@@ -28,7 +28,7 @@ Phần cần Lab Coach làm rõ: `GUIDE.md` mục 1 yêu cầu không tự quy�
 - Kết quả checker và lỗi đã xử lý: chạy `python tools/check_yolo_labels.py` từ thư mục gốc repo, kết quả "ĐẠT cấu trúc: 50/50 file nhãn hợp lệ". Không có lỗi định dạng nào phải xử lý: đủ 50 file đúng tên, mỗi dòng đúng 5 cột, ID lớp trong 0-3, toạ độ chuẩn hoá và không box nào vượt biên ảnh.
 - Danh sách ít nhất 10 ảnh đã rà bằng mắt: `drive_009`, `drive_045`, `drive_036`, `drive_026`, `drive_003`, `drive_030`, `drive_043`, `drive_038`, `drive_034`, `drive_046`. Em rà trên ảnh dựng sẵn đặt nhãn của em cạnh nhãn gold, mỗi lớp một màu giống nhau ở hai bên nên lệch lớp và box thừa nhìn ra ngay.
 - Lỗi bỏ sót/box/class phát hiện khi rà và cách sửa: lỗi lớn nhất là gán thừa — em vẽ 958 box so với 653 box của gold, phần thừa gần như chỉ ở lớp `car` và phần lớn là xe ở xa, cạnh ngắn dưới 40 điểm ảnh. `drive_036` không có box nào khớp gold. Em đã báo Lab Coach và được trả lời "thừa annotate không sao", nên giữ nguyên bộ nhãn thay vì xoá bớt, và ghi lại ở đây để người chấm thấy rõ.
-- Commit khóa nhãn ban đầu: «ĐIỀN hash commit»
+- Commit khóa nhãn ban đầu: `a50100d` — "Lock 50-image YOLO label set, mini guideline and gold QC result", trên nhánh `main` của repo bài làm.
 
 Ghi chú về bốn ảnh `drive_008`, `drive_022`, `drive_033`, `drive_038`: bốn ảnh này em đã gán nhãn một lần ở buổi làm nháp trước, và lần này gán lại từ đầu trong cùng task CVAT với 46 ảnh còn lại. Toàn bộ 50 file nhãn nộp đều lấy từ một bản xuất duy nhất của task đó. So sánh bản nháp cũ với bản mới của bốn ảnh: thứ tự lớp không đổi (61 so với 62 `car`, 4 `truck`, 9 `bus`, 6 `van`), chênh một box `car` mà bản mới bắt thêm ở `drive_008`; các box khác lệch toạ độ nhỏ do vẽ lại.
 
