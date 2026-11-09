@@ -1,0 +1,14 @@
+{
+  "precision": 0.35167766843532117,
+  "recall": 0.27783687943262414,
+  "map50": 0.27184592682940906,
+  "map50_95": 0.19828749247760052,
+  "eval_images": 10,
+  "checkpoint": "D:\\AIA\\day2-lab\\outputs\\yolo26_runs\\vehicle_annotation\\weights\\best.pt",
+  "ultralytics": "8.4.208",
+  "torch": "2.6.0+cu124",
+  "device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "epochs": 50,
+  "imgsz": 640,
+  "seed": 20260909
+}
